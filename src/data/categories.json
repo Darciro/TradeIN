@@ -1,0 +1,64 @@
+{
+  "categories": [
+    {
+      "image" : "https://picsum.photos/id/1/350/475",
+      "title" : "Imóveis",
+      "url" : ""
+    },
+    {
+      "image" : "https://picsum.photos/id/11/350/475",
+      "title" : "Carros e Motos",
+      "url" : ""
+    },
+    {
+      "image" : "https://picsum.photos/id/22/350/475",
+      "title" : "Telemóveis e Tablets",
+      "url" : ""
+    },
+    {
+      "image" : "https://picsum.photos/id/33/350/475",
+      "title" : "Tecnologia",
+      "url" : ""
+    },
+    {
+      "image" : "https://picsum.photos/id/44/350/475",
+      "title" : "Jogos e videojogos",
+      "url" : ""
+    },
+    {
+      "image" : "https://picsum.photos/id/55/350/475",
+      "title" : "Desporto",
+      "url" : ""
+    },
+    {
+      "image" : "https://picsum.photos/id/66/350/475",
+      "title" : "Moda",
+      "url" : ""
+    },
+    {
+      "image" : "https://picsum.photos/id/77/350/475",
+      "title" : "Mobiliário",
+      "url" : ""
+    },
+    {
+      "image" : "https://picsum.photos/id/88/350/475",
+      "title" : "Bebé/criança",
+      "url" : ""
+    },
+    {
+      "image" : "https://picsum.photos/id/99/350/475",
+      "title" : "Animais",
+      "url" : ""
+    },
+    {
+      "image" : "https://picsum.photos/id/111/350/475",
+      "title" : "Serviços",
+      "url" : ""
+    },
+    {
+      "image" : "https://picsum.photos/id/122/350/475",
+      "title" : "Outros",
+      "url" : ""
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+#header {
+  background-color: $dark;
+
+  .navbar {
+    padding: 1rem 0;
+
+    .navbar-brand {
+      color: $orange !important;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff !important;
+    }
+  }
+
+  .advertise-btn {
+    border: 1px solid $orange;
+    font-weight: bold;
+    background-color: $orange;
+    /*border-radius: 18px;*/
+  }
+}
