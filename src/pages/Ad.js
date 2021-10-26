@@ -1,17 +1,35 @@
 import {Image} from "react-bootstrap";
 import {useParams} from "react-router-dom";
+import ads from "../data/ads.json"
 
 function Ad() {
     const {slug} = useParams();
+    let ad = [];
+    ad = ads.filter(ad => ad.name.toLowerCase() === slug);
 
+    if( !ad.length ) {
+        return (
+            <div className="container py-5">
+                <div className="row">
+                    <div className="col-8">
+                        <div className="bg-white p-3 min-vh-100">
+                            <h1 className="display-5 fw-bold">Carregando</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
+    ad = ad[0];
     return (
         <div className="container py-5">
             <div className="row">
                 <div className="col-8">
                     <div className="bg-white p-3">
-                        <Image src="https://picsum.photos/id/450/800/600" fluid className="mb-5"/>
-                        <h1 className="display-5 fw-bold">Página de um anúncio</h1>
-                        <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Donec sollicitudin molestie malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla quis lorem ut libero malesuada feugiat.</p>
+                        <Image src={ad.image_full} fluid className="mb-5"/>
+                        <h1 className="display-5 fw-bold">{ad.name}</h1>
+                        <p>{ad.desc}</p>
                     </div>
                 </div>
                 <div className="col-4">
@@ -22,6 +40,10 @@ function Ad() {
                     <div className="bg-white p-3 mb-3">
                         <h2>Localização</h2>
                         Aqui vem o dados de localização do anuncio
+                    </div>
+                    <div className="bg-white p-3 mb-3">
+                        <h2>Valor</h2>
+                        {ad.value}
                     </div>
                 </div>
             </div>

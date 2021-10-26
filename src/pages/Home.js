@@ -39,9 +39,9 @@ function Home() {
                         <p className="col-md-8 fs-4">Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus suscipit tortor eget felis porttitor volutpat. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
                     </div>
                     <div className="col-4 d-flex flex-column justify-content-around">
-                        <Link className="btn btn-outline-warning btn-sell btn-lg w-100" to="/trade-in/anunciar">Vender</Link>
-                        <Link className="btn btn-outline-success btn-trade btn-lg w-100" to="/trade-in/anunciar">Trocar</Link>
-                        <Link className="btn btn-outline-info btn-rental btn-lg w-100" to="/trade-in/anunciar">Alugar</Link>
+                        <Link className="btn btn-outline-warning btn-sell btn-lg w-100" to="/anunciar">Vender</Link>
+                        <Link className="btn btn-outline-success btn-trade btn-lg w-100" to="/anunciar">Trocar</Link>
+                        <Link className="btn btn-outline-info btn-rental btn-lg w-100" to="/anunciar">Alugar</Link>
                     </div>
                 </div>
             </div>
@@ -63,14 +63,14 @@ function Home() {
                 <TinySlider settings={settings}>
                     {categories.map((el, index) => (
                         <div key={index} style={{position: "relative"}}>
-                            <a href="#">
+                            <Link to="/categoria">
                                 <img
                                     className={`tns-lazy-img`}
                                     data-src={el.image}
                                     alt={el.title}
                                 />
                                 <h3>{el.title}</h3>
-                            </a>
+                            </Link>
                         </div>
                     ))}
                 </TinySlider>
@@ -84,17 +84,18 @@ function Home() {
                     {ads.map((ad, index) => (
                         <div key={index} className="col-3 mb-4">
                             <div className="card">
-                                <img src={ad.image} className="card-img-top" alt="..."/>
-                                <div className="card-body">
-                                    <h5 className="card-title">{ad.name}</h5>
-                                    {/*<p className="card-text">{ad.desc}</p>*/}
-                                    <div className="d-flex flex-row justify-content-between">
-                                        <span className="card-link">{ad.value}</span>
-                                        <span className="card-link">
+                                <Link to={ '/anuncio/' + ad.name.toLowerCase() }>
+                                    <img src={ad.image} className="card-img-top" alt="..."/>
+                                    <div className="card-body">
+                                        <h5 className="card-title">{ad.name}</h5>
+                                        <div className="d-flex flex-row justify-content-between">
+                                            <span className="card-link">{ad.value}</span>
+                                            <span className="card-link">
                                             <small className="text-muted">{ad.locale}</small>
                                         </span>
+                                        </div>
                                     </div>
-                                </div>
+                                </Link>
                             </div>
                         </div>
                     ))}

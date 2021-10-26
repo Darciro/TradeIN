@@ -15,35 +15,35 @@ import './styles/main.scss'
 
 const routes = [
     {
-        path: "/trade-in/anunciar",
+        path: "/anunciar",
         component: Advertise
     },
     {
-        path: "/trade-in/sobre",
+        path: "/sobre",
         component: About
     },
     {
-        path: "/trade-in/categoria",
+        path: "/categoria",
         component: Category
     },
     {
-        path: "/trade-in/perfil/mensagens",
+        path: "/perfil/mensagens",
         component: Messages
     },
     {
-        path: "/trade-in/perfil/favoritos",
+        path: "/perfil/favoritos",
         component: Favorites
     },
     {
-        path: "/trade-in/perfil",
+        path: "/perfil",
         component: Profile,
     },
     {
-        path: "/trade-in/anuncio/:slug",
+        path: "/anuncio/:slug",
         component: Ad
     },
     {
-        path: "/trade-in/",
+        path: "/",
         component: Home
     },
 ];
