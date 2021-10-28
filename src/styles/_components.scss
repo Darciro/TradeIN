@@ -108,8 +108,9 @@
 #categories-carousel {
   cursor: grab;
 
-  .tns-controls {
-    display: none;
+  .tns-controls,
+  button {
+    display: none !important;
   }
 
   .tns-carousel {
@@ -127,6 +128,8 @@
           width: 100%;
           height: auto;
           opacity: .75;
+          position: relative;
+          z-index: 1;
         }
 
         h3 {
@@ -136,22 +139,22 @@
           margin: 0;
           padding: 15px;
           color: #fff;
-          z-index: 1;
+          z-index: 2;
         }
-      }
 
-      &:after {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        content: '';
-        display: block;
-        width: 100%;
-        height: 100%;
-        background: transparent linear-gradient(180deg, $gray-light 0%, $gray-dark 100%) 0 0 no-repeat padding-box;
-        z-index: 0;
+        &:after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: transparent linear-gradient(180deg, $gray-light 0%, $gray-dark 100%) 0 0 no-repeat padding-box;
+          z-index: 0;
+        }
       }
     }
   }

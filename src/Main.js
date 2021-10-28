@@ -10,6 +10,7 @@ import Messages from "./pages/profile/Messages";
 import Favorites from "./pages/profile/Favorites";
 import Category from "./pages/Category";
 import Ad from "./pages/Ad";
+import Ads from "./pages/Ads";
 
 import './styles/main.scss'
 
@@ -21,10 +22,6 @@ const routes = [
     {
         path: "/sobre",
         component: About
-    },
-    {
-        path: "/categoria",
-        component: Category
     },
     {
         path: "/perfil/mensagens",
@@ -43,6 +40,14 @@ const routes = [
         component: Ad
     },
     {
+        path: "/anuncios",
+        component: Ads
+    },
+    {
+        path: "/:categorySlug",
+        component: Category
+    },
+    {
         path: "/",
         component: Home
     },
@@ -51,6 +56,7 @@ const routes = [
 function RouteWithSubRoutes(route) {
     return (
         <Route
+            exact
             path={route.path}
             render={props => (
                 // pass the sub-routes down to keep nesting

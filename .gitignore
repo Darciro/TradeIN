@@ -19,6 +19,7 @@
 .env.production.local
 .idea
 deploy.sh
+src/data/mockup-examples.json
 
 npm-debug.log*
 yarn-debug.log*
