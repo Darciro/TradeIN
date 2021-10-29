@@ -44,6 +44,10 @@ const routes = [
         component: Ads
     },
     {
+        path: "/busca/:q",
+        component: Ads
+    },
+    {
         path: "/:categorySlug",
         component: Category
     },

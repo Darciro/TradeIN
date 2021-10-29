@@ -4,12 +4,17 @@
     border: 1px solid $orange !important;
     padding: 15px;
 
+    .main-search-icon {
+      margin-left: 15px;
+    }
+
     .input-group {
       border-right: 1px solid $orange !important;
 
       input[type="text"] {
         border: none !important;
         font-size: 16px !important;
+        box-shadow: none !important;
       }
     }
 
@@ -51,6 +56,12 @@
     position: relative;
     font-family: $heading-font-primary;
 
+    span {
+      position: relative;
+      z-index: 1;
+      @include transition(color .25s ease-in-out);
+    }
+
     &:before {
       content: '';
       display: block;
@@ -62,7 +73,21 @@
       bottom: 0;
       background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 33 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_30:152)'%3E%3Cpath d='M12.3237 28.4986C13.0285 28.4986 13.5999 27.9187 13.5999 27.2033C13.5999 26.4878 13.0285 25.9079 12.3237 25.9079C11.6188 25.9079 11.0474 26.4878 11.0474 27.2033C11.0474 27.9187 11.6188 28.4986 12.3237 28.4986Z' stroke='%23F8F7FC' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M26.3624 28.4986C27.0673 28.4986 27.6387 27.9187 27.6387 27.2033C27.6387 26.4878 27.0673 25.9079 26.3624 25.9079C25.6576 25.9079 25.0862 26.4878 25.0862 27.2033C25.0862 27.9187 25.6576 28.4986 26.3624 28.4986Z' stroke='%23F8F7FC' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M2.11368 1.29539H7.21868L10.639 18.6407C10.7557 19.2371 11.0754 19.7728 11.542 20.1541C12.0087 20.5354 12.5926 20.738 13.1915 20.7263H25.5967C26.1956 20.738 26.7795 20.5354 27.2462 20.1541C27.7128 19.7728 28.0325 19.2371 28.1492 18.6407L30.1912 7.77237H8.49493' stroke='%23F8F7FC' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_30:152'%3E%3Crect width='32' height='32' fill='white' transform='translate(0.837433)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") !important;
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: 12px center;
+      z-index: 0;
+      @include transition(width .15s ease-in);
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      &:before {
+        width: 100%;
+      }
+
+      span {
+        color: #fff !important;
+      }
     }
   }
 
@@ -93,6 +118,10 @@
   }
 }
 
+.all-link {
+  text-decoration: none !important;
+}
+
 .advertise-type {
   display: block;
   text-align: center;
@@ -117,8 +146,6 @@
     display:flex;
 
     .tns-item {
-      margin-right: 15px;
-
       a {
         display: block;
         position: relative;
@@ -158,4 +185,8 @@
       }
     }
   }
+}
+
+.card {
+  border: none !important;
 }

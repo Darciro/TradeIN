@@ -27,7 +27,7 @@ function Ad() {
             <div className="row">
                 <div className="col-8">
                     <div className="bg-white p-3">
-                        <Image src={ad.image_full} fluid className="mb-5"/>
+                        <Image src={ad.image} fluid className="mb-5"/>
                         <h1 className="display-5 fw-bold">{ad.name}</h1>
                         <p>{ad.desc}</p>
                     </div>

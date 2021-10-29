@@ -1,6 +1,5 @@
 import {Container, Nav, Navbar, NavDropdown} from "react-bootstrap";
 import {Link} from "react-router-dom";
-// import {ReactComponent as Logo} from "";
 
 function Header () {
     return (
@@ -8,8 +7,7 @@ function Header () {
             <Navbar expand="lg">
                 <Container>
                     <Link to="/" className="navbar-brand fw-bolder">
-                        <img src={process.env.PUBLIC_URL + '/logo-white.svg'} />
-                        {/*<span className="text-uppercase fw-normal">Trade</span><span className="fw-bolder">IN</span>*/}
+                        <img alt="Logo" src={process.env.PUBLIC_URL + '/logo-white.svg'} />
                     </Link>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">

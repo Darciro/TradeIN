@@ -8,15 +8,21 @@
       color: $orange !important;
     }
 
-    .navbar-nav .nav-link {
-      color: #fff !important;
-    }
-  }
+    .navbar-nav {
 
-  .advertise-btn {
-    border: 1px solid $orange;
-    font-weight: bold;
-    background-color: $orange;
-    /*border-radius: 18px;*/
+      .nav-link {
+        color: #c1c0c7 !important;
+        font-weight: 300;
+        letter-spacing: 0.16px;
+
+        &.advertise-btn {
+          border: 1px solid $orange;
+          font-weight: bold;
+          background-color: $orange;
+          color: #fff !important;
+        }
+      }
+
+    }
   }
 }

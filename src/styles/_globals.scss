@@ -1,6 +1,7 @@
 body {
   background-color: #f8f7fc;
   font-family: $text-font-primary;
+  color: $dark-blue;
 }
 
 h1,
@@ -17,4 +18,33 @@ h5 {
 
 .highlight-font {
   font-family: $heading-font-primary !important;
+}
+
+.dropdown-toggle {
+  &:after {
+    margin-left: 5px !important;
+  }
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin placeholder-color($color) {
+  &::-webkit-input-placeholder { /* WebKit browsers */
+    color: $color;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: $color;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: $color;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: $color;
+  }
 }
